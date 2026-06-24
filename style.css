@@ -1,9 +1,9 @@
 /* =========================================================
    Adaora Mbanefo — personal site
-   Sage + cream + mustard. Monospace body, serif display.
+   Sage + cream + mustard. Serif body, characterful display.
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
   --sage:        #c1d5c0;   /* original bg, kept */
@@ -17,8 +17,10 @@
   --rust:        #b8552c;
   --ink:         #1a1a1a;
 
-  --serif: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
-  --mono:  'JetBrains Mono', Monaco, 'Courier New', monospace;
+  --serif:      'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --serif-body: 'Newsreader', 'Source Serif', Georgia, serif;
+  --mono:       'Space Grotesk', 'Helvetica Neue', sans-serif;
+  --script:     'Caveat', cursive;
 
   --maxw: 1100px;
 }
@@ -28,9 +30,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--mono);
-  font-size: 15px;
-  line-height: 1.65;
+  font-family: var(--serif-body);
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--forest-ink);
   background-color: var(--sage);
   margin: 0;
@@ -90,8 +92,10 @@ nav ul {
 nav ul li a {
   color: var(--forest-ink);
   text-decoration: none;
+  font-family: var(--mono);
   font-size: 13px;
-  letter-spacing: 0.08em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   position: relative;
   padding: 4px 0;
@@ -126,19 +130,27 @@ section { margin-bottom: 88px; }
 
 /* ---------- Typography ---------- */
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--forest-ink); }
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 450;
+  color: var(--forest-ink);
+  font-variation-settings: 'SOFT' 50, 'WONK' 0;
+}
 
 h1 {
   font-size: clamp(56px, 11vw, 124px);
-  line-height: 0.92;
-  letter-spacing: -0.02em;
+  line-height: 1;
+  letter-spacing: -0.025em;
   margin: 0 0 8px;
+  font-weight: 500;
+  font-variation-settings: 'SOFT' 60, 'WONK' 1;
+  padding-bottom: 4px;
 }
 
-h1 .accent { color: var(--mustard); font-style: italic; }
+h1 .accent { color: var(--mustard); font-style: italic; font-variation-settings: 'SOFT' 100, 'WONK' 1; }
 
 .name-pronunciation {
-  font-family: 'Caveat', 'Brush Script MT', cursive;
+  font-family: var(--script);
   font-size: 28px;
   font-weight: 500;
   color: var(--rust);
@@ -149,21 +161,27 @@ h1 .accent { color: var(--mustard); font-style: italic; }
 
 h2 {
   font-size: clamp(32px, 5vw, 48px);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   margin: 0 0 24px;
+  font-weight: 450;
+  font-variation-settings: 'SOFT' 50, 'WONK' 1;
+  padding-bottom: 4px;
 }
 
 h3 {
   font-size: 22px;
-  line-height: 1.2;
+  line-height: 1.25;
   margin: 0 0 8px;
+  font-weight: 500;
+  padding-bottom: 2px;
 }
 
 .eyebrow {
   font-family: var(--mono);
   font-size: 12px;
-  letter-spacing: 0.18em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--rust);
   margin-bottom: 20px;
@@ -197,7 +215,8 @@ a:hover { color: var(--rust); }
   flex-wrap: wrap;
   gap: 8px 24px;
   font-size: 12px;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--forest);
   margin-bottom: 28px;
@@ -255,20 +274,41 @@ a:hover { color: var(--rust); }
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   margin-top: 16px;
+  padding: 4px 0;
 }
 .chip {
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 6px 12px;
   background: var(--sage-soft);
   border: 1px solid var(--forest);
   color: var(--forest-ink);
   border-radius: 2px;
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: default;
 }
-.chip-mustard { background: var(--mustard); color: var(--cream); border-color: var(--forest-ink); }
+.chip:nth-child(3n+1) { transform: rotate(-1.5deg); }
+.chip:nth-child(3n+2) { transform: rotate(0.8deg); }
+.chip:nth-child(3n)   { transform: rotate(-0.5deg); }
+.chip:hover {
+  transform: rotate(0deg) scale(1.08) translateY(-2px);
+  background: var(--mustard);
+  color: var(--forest-ink);
+  border-color: var(--forest-ink);
+  box-shadow: 2px 3px 0 var(--forest-ink);
+}
+.chip-mustard {
+  background: var(--mustard);
+  color: var(--forest-ink);
+  border-color: var(--forest-ink);
+  font-weight: 600;
+}
+.chip-mustard:hover { background: var(--rust); color: var(--cream); }
 
 /* ---------- Project / Research grid ---------- */
 
@@ -288,11 +328,38 @@ a:hover { color: var(--rust); }
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+  position: relative;
 }
 .card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 var(--forest-ink);
+  transform: translate(-4px, -4px) rotate(-0.3deg);
+  box-shadow: 8px 8px 0 var(--forest-ink);
+}
+
+/* Scroll-reveal: sections fade up as they enter view */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating background doodles */
+.doodle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 0;
+}
+.doodle-squiggle {
+  animation: doodle-drift 8s ease-in-out infinite;
+}
+@keyframes doodle-drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(4px, -6px) rotate(3deg); }
 }
 .card .card-meta {
   font-family: var(--mono);
@@ -558,9 +625,11 @@ footer {
 }
 .footer-copy {
   width: 100%;
+  font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  font-weight: 500;
   color: var(--forest);
   border-top: 1px dashed var(--forest);
   padding-top: 16px;
