@@ -1,20 +1,23 @@
 # adaorambanefo.com
 
-My personal site. I made this because I wanted one place online to keep my research, projects, and current obsessions. Somewhere that wasn't LinkedIn.
+My personal site.
 
 ## How it's built
 
-Vanilla HTML and CSS. No framework, no build step. Five pages, one shared stylesheet, hosted on GitHub Pages. The domain runs through Cloudflare.
+Vanilla HTML, CSS, and a tiny bit of JavaScript. No framework, no build step. Five pages, one shared stylesheet, hosted on GitHub Pages. The domain runs through Cloudflare.
+
+Each page lives in its own folder so the URL stays clean (no `.html` at the end).
 
 ```
 site/
-├── index.html       home
-├── research.html    labs and projects, with collaborators
-├── projects.html    things I've built + the "in the workshop" section
-├── about.html       personal blurb, hobbies, what I love right now
-├── resume.html      CV content + PDF download
-├── style.css        all styling, shared across pages
-└── resume.pdf       my actual resume (download button is wired to this)
+├── index.html            home page (/)
+├── style.css             all styling, shared across pages
+├── script.js             tiny scroll-reveal script
+├── resume.pdf            my actual resume (download button wired to this)
+├── about/index.html      about page (/about)
+├── research/index.html   research page (/research)
+├── projects/index.html   projects page (/projects)
+└── resume/index.html     resume page (/resume)
 ```
 
 ## Editing
@@ -38,9 +41,9 @@ Live in about 30 seconds.
 ## Notes to future me
 
 - Hard refresh (`Cmd+Shift+R`) if a CSS change isn't showing up.
-- The "Coming Soon" mystery on `projects.html` is intentional. When a project is ready, move its card up into the regular grid above.
-- Keep the "Currently" section on `index.html` fresh. That's the part visitors come back for.
+- Keep the "Currently" section on the home page fresh. That's the part visitors come back for.
 - Resume PDF lives in the root as `resume.pdf`. Replace it whenever I update my CV.
+- The workshop section on `/projects` is where in-progress ideas live. When a project is ready, move its card up into the regular grid above.
 
 ---
 
