@@ -281,8 +281,13 @@ a:hover { color: var(--rust); }
   grid-template-columns: 1fr 1fr;
   gap: 48px;
 }
+.interests-cols {
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: start;
+}
 @media (max-width: 720px) {
   .two-col { grid-template-columns: 1fr; gap: 32px; }
+  .interests-cols { grid-template-columns: 1fr; }
 }
 
 /* tag chips */
@@ -324,6 +329,20 @@ a:hover { color: var(--rust); }
 }
 .chip-mustard::before { content: "→ "; }
 .chip-mustard:hover { background: var(--mustard); }
+
+/* see-through workshop bubbles */
+.chip-ghost {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  border-style: dashed;
+  color: var(--forest);
+}
+.chip-ghost:hover {
+  background: rgba(250, 245, 230, 0.4);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
 
 /* project / research grid */
 
@@ -471,6 +490,7 @@ a:hover { color: var(--rust); }
   letter-spacing: -0.015em;
   line-height: 1.12;
   margin: 0 0 10px;
+  max-width: 720px;
 }
 .research-people {
   font-family: var(--mono-code);
@@ -829,30 +849,28 @@ a:hover { color: var(--rust); }
 }
 .things-list em { font-family: var(--serif); font-style: italic; }
 
-/* rotating tesseract wireframe (techy background element) */
+/* rotating tesseract wireframe (techy background element, SVG self-animates) */
 .tesseract-bg {
   position: absolute;
-  top: 0;
-  right: -180px;
-  width: 480px;
-  height: 480px;
-  opacity: 0.45;
+  top: 40px;
+  right: -60px;
+  width: 400px;
+  height: 400px;
+  opacity: 0.4;
   pointer-events: none;
-  animation: tesseract-spin 60s linear infinite;
   z-index: 1;
 }
 .tesseract-bg svg { width: 100%; height: 100%; display: block; }
-@keyframes tesseract-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .tesseract-bg {
-    width: 320px; height: 320px;
-    right: -120px; opacity: 0.3;
+    width: 280px; height: 280px;
+    right: -40px; top: 20px; opacity: 0.28;
   }
 }
-.hero { position: relative; overflow-x: hidden; overflow-y: visible; }
+@media (max-width: 620px) {
+  .tesseract-bg { display: none; }
+}
+.hero { position: relative; overflow-x: clip; overflow-y: visible; }
 .hero > * { position: relative; z-index: 2; }
 .hero > .tesseract-bg { z-index: 1; }
 
