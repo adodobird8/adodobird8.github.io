@@ -210,6 +210,14 @@ a:hover { color: var(--rust); }
   padding-top: 24px;
   padding-bottom: 32px;
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: center;
+  gap: 32px;
+}
+.hero-text { min-width: 0; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
 }
 
 .hero .meta {
@@ -849,30 +857,20 @@ a:hover { color: var(--rust); }
 }
 .things-list em { font-family: var(--serif); font-style: italic; }
 
-/* rotating tesseract wireframe (techy background element, SVG self-animates) */
+/* rotating tesseract wireframe (sits in the hero's right column, SVG self-animates) */
 .tesseract-bg {
-  position: absolute;
-  bottom: 0px;
-  right: -40px;
-  width: 360px;
-  height: 360px;
-  opacity: 0.4;
+  width: 100%;
+  max-width: 360px;
+  opacity: 0.5;
   pointer-events: none;
-  z-index: 1;
+  justify-self: center;
 }
-.tesseract-bg svg { width: 100%; height: 100%; display: block; }
-@media (max-width: 1000px) {
+.tesseract-bg svg { width: 100%; height: auto; display: block; }
+@media (max-width: 900px) {
   .tesseract-bg {
-    width: 260px; height: 260px;
-    right: -30px; opacity: 0.26;
+    display: none;
   }
 }
-@media (max-width: 720px) {
-  .tesseract-bg { display: none; }
-}
-.hero { position: relative; overflow-x: clip; overflow-y: visible; }
-.hero > * { position: relative; z-index: 2; }
-.hero > .tesseract-bg { z-index: 1; }
 
 /* motivation block — code-comment framing (replaces africa panel) */
 
