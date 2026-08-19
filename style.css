@@ -852,22 +852,22 @@ a:hover { color: var(--rust); }
 /* rotating tesseract wireframe (techy background element, SVG self-animates) */
 .tesseract-bg {
   position: absolute;
-  top: 40px;
-  right: -60px;
-  width: 400px;
-  height: 400px;
+  bottom: 0px;
+  right: -40px;
+  width: 360px;
+  height: 360px;
   opacity: 0.4;
   pointer-events: none;
   z-index: 1;
 }
 .tesseract-bg svg { width: 100%; height: 100%; display: block; }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .tesseract-bg {
-    width: 280px; height: 280px;
-    right: -40px; top: 20px; opacity: 0.28;
+    width: 260px; height: 260px;
+    right: -30px; opacity: 0.26;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 720px) {
   .tesseract-bg { display: none; }
 }
 .hero { position: relative; overflow-x: clip; overflow-y: visible; }
