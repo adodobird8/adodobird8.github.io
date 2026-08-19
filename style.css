@@ -493,12 +493,12 @@ a:hover { color: var(--rust); }
 }
 .research-entry h2 {
   font-family: var(--sans-bold);
-  font-size: clamp(22px, 3vw, 28px);
+  font-size: clamp(24px, 3.2vw, 34px);
   font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.12;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
   margin: 0 0 10px;
-  max-width: 720px;
+  max-width: 1000px;
 }
 .research-people {
   font-family: var(--mono-code);
@@ -513,14 +513,25 @@ a:hover { color: var(--rust); }
 }
 .research-entry p {
   font-family: var(--sans-bold);
-  max-width: 720px;
-  font-size: 14.5px;
-  line-height: 1.65;
+  max-width: 1000px;
+  font-size: 15px;
+  line-height: 1.7;
   margin: 0 0 12px;
 }
 .research-entry p:last-child {
   margin-bottom: 0;
 }
+.research-links {
+  margin-top: 4px !important;
+  font-family: var(--mono-code);
+  font-size: 12.5px;
+}
+.research-links a {
+  color: var(--forest);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--forest);
+}
+.research-links a:hover { color: var(--rust); border-color: var(--rust); }
 
 /* lists for research */
 
