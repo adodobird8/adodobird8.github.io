@@ -211,9 +211,9 @@ a:hover { color: var(--rust); }
   padding-bottom: 32px;
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 440px;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
 .hero-text { min-width: 0; }
 @media (max-width: 900px) {
@@ -860,10 +860,11 @@ a:hover { color: var(--rust); }
 /* rotating tesseract wireframe (sits in the hero's right column, SVG self-animates) */
 .tesseract-bg {
   width: 100%;
-  max-width: 360px;
+  max-width: 440px;
   opacity: 0.5;
   pointer-events: none;
-  justify-self: center;
+  justify-self: start;
+  margin-right: 16px;
 }
 .tesseract-bg svg { width: 100%; height: auto; display: block; }
 @media (max-width: 900px) {
