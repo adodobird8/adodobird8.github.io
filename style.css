@@ -149,24 +149,71 @@ h1 {
 
 h1 .accent { color: var(--mustard); font-style: normal; font-weight: 700; }
 
-.name-pronunciation {
-  font-family: var(--script);
-  font-size: 40px;
-  font-weight: 500;
-  color: var(--rust);
-  margin: 0;
-  letter-spacing: 0.01em;
-  line-height: 1;
+/* hero name — Fraunces, with hover-reveal pronunciation */
+.hero-name {
+  font-family: var(--serif);
+  margin: 0 0 20px;
+  padding: 0;
+  line-height: 0.98;
+}
+.hero-name .nameline {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hero-name .nword {
+  font-family: var(--serif);
+  font-size: clamp(52px, 10vw, 112px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'SOFT' 40, 'WONK' 1;
+  position: relative;
   display: inline-block;
+  cursor: default;
+}
+.hero-name .nword.first { color: var(--forest-ink); }
+.hero-name .nword.last  { color: var(--mustard); font-style: italic; }
+.hero-name .surface {
+  font-family: var(--script);
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  color: var(--rust);
+  margin-left: 16px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.32s ease, transform 0.32s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.hero-name .nword:hover .surface {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* concept line — the organising idea */
+.concept-line {
+  max-width: 620px;
+  font-family: var(--serif-body);
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--forest-ink);
+  margin: 24px 0 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--mustard);
 }
 
 h2 {
-  font-family: var(--sans-bold);
-  font-size: clamp(32px, 5vw, 48px);
-  line-height: 1.1;
-  letter-spacing: -0.025em;
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
   margin: 0 0 24px;
   font-weight: 600;
+  font-variation-settings: 'SOFT' 40, 'WONK' 1;
   padding-bottom: 4px;
 }
 
@@ -884,41 +931,57 @@ a:hover { color: var(--rust); }
   }
 }
 
-/* motivation block — code-comment framing (replaces africa panel) */
+/* interests — stacked: prose then topics (balanced by construction) */
 
-.motivation-block {
-  border: 1px solid var(--forest);
-  background: rgba(250, 245, 230, 0.55);
-  padding: 34px 36px 30px;
-  border-radius: 4px;
+.interests-body {
+  max-width: 680px;
+}
+.interests-body p {
   font-family: var(--sans-bold);
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: var(--forest-ink);
-  position: relative;
-  max-width: 720px;
-  box-shadow: 4px 4px 0 var(--forest-ink);
-  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 16px;
 }
-.motivation-block::before {
-  content: "// why this matters";
-  position: absolute;
-  top: -10px;
-  left: 26px;
-  background: var(--sage);
-  padding: 0 12px;
+.topics-row {
+  margin-top: 28px;
+}
+.topics-row .eyebrow { margin-bottom: 14px; }
+
+/* inline links (go to research →, see the projects →) */
+
+.inline-link {
   font-family: var(--mono-code);
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--rust);
-  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--rust);
+  white-space: nowrap;
+  margin-left: 4px;
 }
-.motivation-block p { margin: 0 0 12px; }
-.motivation-block p:last-child { margin-bottom: 0; }
-.motivation-block em {
-  font-family: var(--serif);
+.inline-link:hover { color: var(--forest); border-color: var(--forest); }
+
+/* motivation — lead statement + prose, no heavy box */
+
+.motivation {
+  max-width: 760px;
+}
+.motivation .lead {
+  font-family: var(--serif-body);
+  font-size: clamp(19px, 2.6vw, 23px);
+  line-height: 1.45;
   font-style: italic;
   color: var(--forest);
+  margin: 0 0 22px;
+  padding-left: 20px;
+  border-left: 2px solid var(--mustard);
 }
+.motivation p {
+  font-family: var(--sans-bold);
+  font-size: 16px;
+  line-height: 1.72;
+  margin: 0 0 16px;
+}
+.motivation p:last-child { margin-bottom: 0; }
 
 /* africa-shaped focus panel (uses actual SVG file with overlay text) */
 
