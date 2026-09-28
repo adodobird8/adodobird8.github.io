@@ -235,7 +235,7 @@ h3 {
   text-transform: lowercase;
   color: var(--rust);
   margin-bottom: 14px;
-  display: inline-block;
+  display: block;
 }
 .eyebrow::before {
   content: "[ ";
@@ -961,6 +961,15 @@ a:hover { color: var(--rust); }
 .inline-link:hover { color: var(--forest); border-color: var(--forest); }
 
 /* motivation — lead statement + prose, no heavy box */
+
+/* right-shifted section block (balances against a left-aligned section above) */
+.section-right {
+  max-width: 760px;
+  margin-left: auto;
+}
+@media (max-width: 900px) {
+  .section-right { margin-left: 0; }
+}
 
 .motivation {
   max-width: 760px;
