@@ -51,35 +51,55 @@
         </p>
       </div>
 
-      <!-- rotating 4D tesseract wireframe -->
-      <div class="tesseract-bg" aria-hidden="true">
-        <svg viewBox="-130 -130 260 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#215f42" stroke-width="0.7">
-          <g>
-            <animateTransform attributeName="transform" attributeType="XML" type="rotate"
-              from="0 0 0" to="360 0 0" dur="40s" repeatCount="indefinite"/>
-            <!-- outer cube -->
-            <polygon points="-50,-50 50,-50 50,50 -50,50"/>
-            <polygon points="-25,-75 75,-75 75,25 -25,25"/>
-            <line x1="-50" y1="-50" x2="-25" y2="-75"/>
-            <line x1="50" y1="-50" x2="75" y2="-75"/>
-            <line x1="50" y1="50" x2="75" y2="25"/>
-            <line x1="-50" y1="50" x2="-25" y2="25"/>
-            <!-- inner cube -->
-            <polygon points="-22,-22 22,-22 22,22 -22,22" stroke-width="0.5"/>
-            <polygon points="-11,-33 33,-33 33,11 -11,11" stroke-width="0.5"/>
-            <line x1="-22" y1="-22" x2="-11" y2="-33"/>
-            <line x1="22" y1="-22" x2="33" y2="-33"/>
-            <line x1="22" y1="22" x2="33" y2="11"/>
-            <line x1="-22" y1="22" x2="-11" y2="11"/>
-            <!-- connections outer to inner -->
-            <line x1="-50" y1="-50" x2="-22" y2="-22"/>
-            <line x1="50" y1="-50" x2="22" y2="-22"/>
-            <line x1="50" y1="50" x2="22" y2="22"/>
-            <line x1="-50" y1="50" x2="-22" y2="22"/>
-            <line x1="-25" y1="-75" x2="-11" y2="-33"/>
-            <line x1="75" y1="-75" x2="33" y2="-33"/>
-            <line x1="75" y1="25" x2="33" y2="11"/>
-            <line x1="-25" y1="25" x2="-11" y2="11"/>
+      <!-- stick figure: working → reading, on hover -->
+      <div class="hero-figure" aria-hidden="true">
+        <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#215f42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <!-- pose a: sitting cross-legged, laptop facing her -->
+          <g class="pose pose-a">
+            <circle cx="140" cy="48" r="9" fill="#215f42"/>
+            <circle cx="180" cy="48" r="9" fill="#215f42"/>
+            <circle cx="160" cy="72" r="22"/>
+            <circle cx="151" cy="74" r="6"/>
+            <circle cx="169" cy="74" r="6"/>
+            <line x1="157" y1="74" x2="163" y2="74"/>
+            <path d="M 154 84 Q 160 88 166 84"/>
+            <line x1="160" y1="94" x2="160" y2="112"/>
+            <path d="M 160 100 L 128 132 L 134 152"/>
+            <path d="M 160 100 L 192 132 L 186 152"/>
+            <rect x="128" y="112" width="64" height="42" rx="3" fill="#215f42"/>
+            <path transform="translate(152 125) scale(0.16)" fill="#c1d5c0" stroke="none"
+              d="M 18 12 L 30 6 L 45 4 L 60 6 L 68 10 L 72 14 L 85 18 L 88 22 L 90 30 L 92 40 L 96 48 L 100 50 L 99 54 L 92 58 L 84 64 L 78 72 L 72 82 L 66 90 L 58 97 L 50 100 L 44 98 L 40 92 L 38 84 L 36 74 L 40 66 L 44 62 L 42 56 L 36 52 L 28 50 L 20 50 L 10 46 L 4 40 L 2 32 L 6 24 L 10 18 L 14 14 Z"/>
+            <rect x="123" y="154" width="74" height="5" rx="2" fill="#215f42"/>
+            <path d="M 148 159 Q 98 170 106 184 Q 138 200 182 196"/>
+            <path d="M 172 159 Q 222 170 214 184 Q 182 200 138 196"/>
+            <path d="M 182 196 L 192 192"/>
+            <path d="M 138 196 L 128 192"/>
+          </g>
+          <!-- pose b: on her stomach, propped on elbows, book on the floor -->
+          <g class="pose pose-b">
+            <path d="M 28 197 L 70 197 L 74 180 L 34 178 Z" fill="#faf5e6"/>
+            <path d="M 28 197 L 70 197 L 74 214 L 34 216 Z" fill="#faf5e6"/>
+            <line x1="28" y1="197" x2="70" y2="197"/>
+            <line x1="40" y1="194" x2="41" y2="184" stroke-width="1.4"/>
+            <line x1="48" y1="194" x2="49" y2="184" stroke-width="1.4"/>
+            <line x1="56" y1="194" x2="57" y2="184" stroke-width="1.4"/>
+            <line x1="64" y1="194" x2="65" y2="184" stroke-width="1.4"/>
+            <line x1="40" y1="200" x2="41" y2="210" stroke-width="1.4"/>
+            <line x1="48" y1="200" x2="49" y2="210" stroke-width="1.4"/>
+            <line x1="56" y1="200" x2="57" y2="210" stroke-width="1.4"/>
+            <line x1="64" y1="200" x2="65" y2="210" stroke-width="1.4"/>
+            <circle cx="96" cy="136" r="9" fill="#215f42"/>
+            <circle cx="114" cy="144" r="9" fill="#215f42"/>
+            <circle cx="100" cy="162" r="20"/>
+            <circle cx="86" cy="168" r="6"/>
+            <line x1="92" y1="167" x2="106" y2="162"/>
+            <line x1="114" y1="174" x2="186" y2="204"/>
+            <path d="M 118 178 L 98 203 L 72 199"/>
+            <path d="M 122 181 L 108 205 L 80 207"/>
+            <path d="M 186 206 L 284 207"/>
+            <path d="M 186 202 L 232 199 L 246 158"/>
+            <path d="M 246 158 L 258 155"/>
+            <rect x="196" y="226" width="56" height="8" rx="2" fill="#215f42"/>
           </g>
         </svg>
       </div>
@@ -88,23 +108,24 @@
     <div class="ascii-rule">· · · · · · · · · · · · · · · · · · · · · · · · · · · ·</div>
 
     <!-- interests -->
-    <section class="reveal-on-scroll">
+    <section class="reveal-on-scroll section-center">
       <p class="eyebrow">Interests</p>
       <h2 class="section-h">What I'm thinking about<svg class="squiggle" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><path d="M 3 5 Q 20 0, 40 5 T 80 5 T 120 5 T 160 5 T 200 5 T 240 5 T 280 5 T 297 5" fill="none" stroke="#c98e1a" stroke-width="2" stroke-linecap="round"/></svg></h2>
 
       <div class="interests-body">
         <p>
-          My active research lives in NLP/NLU and computational
-          linguistics. I currently work with deep learning architectures,
-          developing language models, and detecting and analysing
-          multiparty interactions involving young children.
+          My research lives in NLP/NLU and computational linguistics. Right
+          now I study how children enter multiparty conversation, using
+          transformers to measure linguistic alignment in daylong
+          recordings.
           <a href="/research/" class="inline-link">go to research &rarr;</a>
         </p>
         <p>
-          But my interests run wider than what I'm researching at any
-          given moment. I want to work in machine learning and AI
-          engineering more broadly. Not just studying models but building
-          them, shipping them, and figuring out why they break.
+          What has a language model actually learned, and where can you
+          see it? Who do these models harm, and how do you reduce that harm
+          without erasing the people you're trying to protect? And how do
+          you build models that work for the languages they were never
+          built for? Those are the questions I want to answer.
         </p>
       </div>
 
@@ -130,8 +151,7 @@
     <hr class="divider">
 
     <!-- africa -->
-    <section class="reveal-on-scroll">
-      <div class="section-right">
+    <section class="reveal-on-scroll section-center">
       <p class="eyebrow">Motivation</p>
       <h2 class="section-h">Africa shouldn't be left behind<svg class="squiggle" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><path d="M 3 5 Q 20 0, 40 5 T 80 5 T 120 5 T 160 5 T 200 5 T 240 5 T 280 5 T 297 5" fill="none" stroke="#c98e1a" stroke-width="2" stroke-linecap="round"/></svg></h2>
 
@@ -141,17 +161,20 @@
           The technical divide between the African continent and the
           rest of the world is widening fast, especially in AI and
           language technology. But it isn't about talent. Africa has
-          brilliant people, researchers, and builders. The infrastructure
-          is there, or catching up. What's missing is something deeper.
+          brilliant people, researchers, and builders, and the
+          infrastructure is being built. What's missing is access. So
+          much information isn't available in the languages people
+          speak, and most African languages don't have the data
+          a model would need to fix that.
         </p>
         <p>
-          That's the gap I want to help close. Not by deciding from the
-          outside what Africa needs, but by working on tools and research
-          that include African data, languages, and contexts from the
-          ground up.
+          That's the gap I want to help close. I'm African, and I know
+          this continent intimately, but not completely. So I want to
+          work alongside the people who are already doing just that,
+          using tools and research built with African data, languages,
+          contexts, and people in mind.
           <a href="/projects/" class="inline-link">see the projects &rarr;</a>
         </p>
-      </div>
       </div>
     </section>
 
