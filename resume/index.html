@@ -4,256 +4,321 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume — Adaora Mbanefo</title>
-  <meta name="description" content="Resume of Adaora Mbanefo, an undergraduate at UIUC. NLP, machine learning, AI engineering, and deep love of all things language.">
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <meta name="description" content="Adaora Mbanefo is an undergraduate at UIUC. NLP, machine learning, AI engineering, and deep love of all things language.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Space+Grotesk:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+.fig{width:100%;max-width:560px;justify-self:end;cursor:default;margin-right:-30px}
+.page-head{padding:150px 0 40px}
+.page-head h1{font-size:clamp(56px,7vw,96px);line-height:.95;letter-spacing:-.025em}
+.page-head .sub{font-size:18px;color:var(--forest);margin-top:18px;max-width:50ch}
+.entry{display:grid;grid-template-columns:300px 1fr;gap:56px;padding:64px 0;border-top:1px solid rgba(20,55,38,.16)}
+.entry:first-of-type{border-top:0}
+.entry .meta{font-size:13px;line-height:1.7}
+.entry .meta .lab{font-weight:600;color:var(--ink);font-size:15px;margin-bottom:6px;display:block}
+.entry .meta .when{color:var(--rust);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11.5px;display:block;margin-bottom:12px}
+.entry .meta .with{color:var(--forest);opacity:.9}
+.entry h2{font-size:clamp(28px,2.6vw,38px);line-height:1.1;margin-bottom:18px}
+.entry p{font-size:16.5px;max-width:62ch}
+.entry .file{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;padding:9px 14px;border:1.5px solid var(--forest);border-radius:999px;transition:.2s}
+.entry .file:hover{background:var(--forest);color:var(--cream)}
+section.list{display:block;padding:0 0 80px}
+/* research v2 */
+.page-head{padding:150px 0 56px}
+.page-head .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.page-head h1{font-size:clamp(56px,7.4vw,104px);line-height:.92;letter-spacing:-.03em}
+.page-head .q{font-family:var(--display);font-weight:300;font-size:clamp(22px,2.2vw,30px);line-height:1.3;color:var(--forest);margin:0}
+.page-head .q b{font-weight:500;color:var(--ink)}
+
+/* featured */
+.featured{background:var(--forest);color:var(--cream);border-radius:26px;padding:56px 56px 52px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;margin-bottom:40px}
+.featured .label{color:var(--mustard)}
+.featured h2{font-size:clamp(34px,3.4vw,48px);line-height:1.04;color:var(--cream);margin-bottom:22px}
+.featured p{color:rgba(250,245,230,.88);font-size:16.5px}
+.featured .side{border-left:1px solid rgba(250,245,230,.22);padding-left:40px;display:flex;flex-direction:column;justify-content:flex-start}
+.featured .kv{font-size:14px;line-height:1.7;color:rgba(250,245,230,.8)}
+.featured .kv b{display:block;color:var(--cream);font-weight:600;font-size:15px}
+.featured .kv+.kv{margin-top:18px}
+.featured .stat{font-family:var(--display);font-weight:300;font-size:64px;line-height:1;color:var(--mustard);margin:30px 0 6px}
+.featured .statl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,245,230,.75);font-weight:600}
+.featured .file,.ecard .file{display:inline-block;border:1.5px solid var(--mustard);color:var(--cream);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none;transition:.2s}
+.featured .file{margin-top:28px;align-self:flex-start}
+.ecard .file{border-color:var(--forest);color:var(--forest)}
+.ecard .file:hover{background:var(--forest);color:var(--cream)}
+.featured .file:hover{background:var(--mustard);color:var(--ink)}
+
+/* other entries as cream cards */
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ecard{background:var(--cream);border-radius:20px;padding:32px 30px;display:flex;flex-direction:column;transition:.25s}
+.ecard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,55,38,.14)}
+.ecard .when{color:var(--rust);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:11.5px}
+.ecard .lab{font-weight:600;font-size:14px;margin:6px 0 16px;color:var(--forest)}
+.ecard h3{font-family:var(--display);font-weight:500;font-size:24px;line-height:1.12;margin:0 0 12px;letter-spacing:-.01em}
+.ecard p{font-size:15px;opacity:.88;flex:1}
+.ecard .with{font-size:13px;color:var(--forest);margin-top:14px}
+.ecard .file{margin-top:16px;align-self:flex-start;font-size:13px;padding:8px 13px}
+section.list{display:block;padding:0 0 100px}
+@media(max-width:900px){.page-head .grid,.featured{grid-template-columns:1fr}.featured .side{border-left:0;padding-left:0;border-top:1px solid rgba(250,245,230,.22);padding-top:28px}.more{grid-template-columns:1fr}}
+.rhead{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.rhead .meta{font-size:14px;color:var(--forest);display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.rhead .meta a.dl{display:inline-block;background:var(--ink);color:var(--cream);text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;transition:.2s}
+.rhead .meta a.dl:hover{background:var(--forest)}
+.rsec{display:block;padding:48px 0 36px}
+.rsec h2{font-size:clamp(30px,2.8vw,40px);margin:0 0 10px;display:flex;align-items:center;gap:24px}
+.rsec h2::after{content:"";flex:1;height:1px;background:rgba(20,55,38,.22)}
+.rsec h2 br{display:none}
+.ritem{display:grid;grid-template-columns:170px 300px 1fr;gap:36px;padding:26px 0;align-items:start}
+.ritem > div:last-child{min-width:0}
+.ritem+.ritem{border-top:1px solid rgba(20,55,38,.1)}
+.ritem .when{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--rust);font-weight:600;padding-top:4px;line-height:1.5}
+.ritem .when small{display:block;text-transform:none;letter-spacing:0;color:var(--forest);font-weight:500;margin-top:4px;font-size:12.5px}
+.ritem .org{font-family:var(--display);font-weight:500;font-size:22px;line-height:1.15;letter-spacing:-.01em}
+.ritem .role{font-size:14px;color:var(--forest);font-weight:600;margin:4px 0 10px}
+.ritem ul{margin:0;padding-left:18px;font-size:15px;line-height:1.6}
+.ritem li{margin-bottom:6px}
+.ritem p{font-size:14.5px;max-width:none;margin:6px 0 0;opacity:.9}
+
+.ritem .award{display:inline-block;background:var(--cream);border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:600;margin:4px 6px 0 0;color:var(--forest)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
+.skills div{font-size:15px;padding:10px 0;border-bottom:1px solid rgba(20,55,38,.1)}
+.skills b{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+.updated{font-size:13px;color:var(--forest);font-style:italic}
+section.list{padding-bottom:70px}
+@media(max-width:900px){.rhead,.ritem,.skills,.ritem .edu{grid-template-columns:1fr}.ritem .edu{grid-column:1}}
+  </style>
 </head>
 <body>
+<nav class="nav">
+  <span class="brand">adaora</span>
+  <a href="/">home</a><a href="/research/">research</a><a href="/projects/">projects</a><a href="/about/">about</a><a href="/resume/" class="on">resume</a>
+</nav>
 
-  <header>
-    <div class="nav-inner">
-      <a href="/" class="brand">adaora.mbanefo</a>
-      <nav>
-        <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/research/">research</a></li>
-          <li><a href="/projects/">projects</a></li>
-          <li><a href="/about/">about</a></li>
-          <li><a href="/resume/" class="active">resume</a></li>
-        </ul>
-      </nav>
+<main>
+<section class="page-head" style="display:block">
+  <div class="wrap rhead">
+    <div>
+      <p class="label rv">Resume</p>
+      <h1 class="rv d1">Education,<br>experience &amp;<br>the rest</h1>
     </div>
-  </header>
+    <div class="meta rv d2">
+      <span>Champaign, IL · <a href="mailto:adaorambanefo@gmail.com">adaorambanefo@gmail.com</a></span>
+      <a class="dl" href="/resume.pdf" download>↓ Download PDF</a>
+    </div>
+  </div>
+</section>
 
-  <main>
+<section class="list">
+<div class="wrap">
 
-    <section class="reveal page-head" style="margin-bottom: 32px;">
-      <h1 class="page-title">Resume</h1>
-      <p class="page-subtitle">&gt; education, experience &amp; the rest</p>
-      <div style="margin-top: 16px; font-family: var(--mono-code); font-size: 13px; color: var(--forest);">
-        Champaign, IL &nbsp;&middot;&nbsp; <a href="mailto:adaorambanefo@gmail.com">adaorambanefo@gmail.com</a>
-      </div>
-      <a href="/resume.pdf" class="download" download>↓ download PDF</a>
-    </section>
-
-    <section class="resume">
-
-      <!-- education -->
-      <h2>Education</h2>
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">University of Illinois Urbana-Champaign</span>
-          <span class="when">May 2028</span>
+  <div class="rsec rv">
+    <h2>Education</h2>
+    <div>
+      <div class="ritem">
+        <div class="when">Expected May 2028</div>
+        <div>
+          <div class="org">University of Illinois Urbana-Champaign</div>
+          <div class="role">B.S., Statistics, Linguistics, and Actuarial Science · Minor in Computer Science</div>
         </div>
-        <div style="margin: 4px 0 8px; font-size: 14px;">
-          B.S., Majors in Statistics, Linguistics, and Actuarial Science &middot; Minor in Computer Science
-        </div>
-        <ul style="margin: 8px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.6;">
-          <li>Fiddler Innovation Undergraduate Student Fellowship Award (2026)</li>
-          <li>ICIS Founding Generation Fellowship, International Congress of Infant Studies (2026)</li>
-          <li>National Center for Supercomputing Applications Letter of Recognition (May 2026)</li>
-        </ul>
-        <p style="margin: 6px 0 0; font-size: 13px;">
-          Relevant coursework: Probability, Mathematical Statistics, Statistical Modelling, Applied Machine Learning, Statistical Learning, Linear Algebra, Data Structures, Computer Systems.
-        </p>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">Phillips Academy Andover</span>
-          <span class="when">Andover, MA</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Preparatory boarding school</span>
-          <span class="when">Sept 2021 — May 2024</span>
-        </div>
-        <p style="margin: 6px 0 0; font-size: 13px;">
-          Winfield M. Sides Prize for Excellence in Computer Science (May 2023).
-        </p>
-        <p style="margin: 6px 0 0; font-size: 13px;">
-          Activities: Blue Key Head &middot; Co-Head of Fusion (African-Caribbean Dance Group) &middot; Co-president of the Black Student Union &middot; Co-founder of the African Student Association &middot; ASL Club Co-Head.
-        </p>
-      </div>
-
-      <!-- experience -->
-      <h2>Experience</h2>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">CS 340: Introduction to Computer Systems, University of Illinois Urbana-Champaign</span>
-          <span class="when">Champaign, IL</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Course Assistant</span>
-          <span class="when">Fall 2026</span>
-        </div>
-        <ul>
-          <li>Support undergraduates in a systems course covering computer architecture, memory management, concurrency, and networking.</li>
-          <li>Hold office hours, grade coursework, and help students work through systems-level debugging in C.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">ChatterLab, University of Chicago</span>
-          <span class="when">Chicago, IL</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Junior Researcher</span>
-          <span class="when">Jun 2026 — Present</span>
-        </div>
-        <ul>
-          <li>Detect children's entry into multiparty conversation in naturalistic home recordings, using drops in linguistic alignment to mark interaction boundaries.</li>
-          <li>Build and run semantic alignment pipelines in ALIGN 2.0 on caregiver-child speech in Python, supported by measures such as BERTScore and the Entropy-conVergence Metric.</li>
-          <li>Develop an ELAN-to-ALIGN preprocessing converter that interleaves speaker tiers by time and preserves sung and wordless child vocalisations, moving the analysis from sample data onto real daylong audio.</li>
-          <li>Present research on identifying multiparty conversation through temporal and alignment-based measures at the ICIS Founding Generation Symposium, September 2026.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">Learning and Language Lab, University of Illinois</span>
-          <span class="when">Champaign, IL</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Research Assistant</span>
-          <span class="when">Aug 2025 — May 2026</span>
-        </div>
-        <ul>
-          <li>Develop a transformer-based model combining visual, linguistic, and BERT-derived features to predict eye-movement patterns.</li>
-          <li>Expand and curate an eye-tracking corpus from 225k to 800k+ word fixations across skilled readers.</li>
-          <li>Engineer Python pipelines to extract, quantify, and visualise naturalistic caregiver-child interactions for publication.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">Inhance Supply Chain Solutions</span>
-          <span class="when">Johannesburg, South Africa</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Data Science Intern</span>
-          <span class="when">Jun 2025 — Aug 2025</span>
-        </div>
-        <ul>
-          <li>Built an automated Python forecasting pipeline using Darts and StatsForecast for time-series preprocessing and modelling.</li>
-          <li>Integrated the forecasting system with AWS Redshift and Lambda for real-time execution, deploying to 400+ warehouses.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">Adanian Labs, AI Center of Excellence</span>
-          <span class="when">Nairobi, Kenya</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">AI Engineering Intern</span>
-          <span class="when">Jul 2024 — Oct 2024</span>
-        </div>
-        <ul>
-          <li>Co-designed Mwalimu AI, an AI-powered CBC curriculum planner for Kenyan educators, in Python.</li>
-          <li>Fine-tuned the Agricare chatbot backend services, increasing response accuracy by 20%.</li>
-        </ul>
-      </div>
-
-      <!-- leadership & volunteering -->
-      <h2>Leadership &amp; Volunteering</h2>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">Littafin Fasaha</span>
-          <span class="when">Remote</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Software Engineer</span>
-          <span class="when">Mar 2026 — Present</span>
-        </div>
-        <ul>
-          <li>Fine-tune large language models to deliver interactive computer science instruction in Hausa and other underrepresented African languages.</li>
-          <li>Develop frontend components that integrate model outputs with the user-facing interface, walking students through coding exercises interactively.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">University of Illinois Urbana-Champaign</span>
-          <span class="when">Champaign, IL</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Orientation Leader</span>
-          <span class="when">May 2026 — Present</span>
-        </div>
-        <ul>
-          <li>Welcomed incoming students and their families to campus, leading group sessions on academic planning, university expectations, and student life.</li>
-          <li>Served as a first point of contact for questions about registration, coursework, and adjusting to college.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">NCSA Research Conference Committee</span>
-          <span class="when">Champaign, IL</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Industry Networking Lead</span>
-          <span class="when">Oct 2025 — Present</span>
-        </div>
-        <ul>
-          <li>Coordinated with the NCSA Industry Program and university partners to identify and invite industry participants.</li>
-          <li>Developed panel questions to align with the 2026 conference theme.</li>
-          <li>Moderated and led industry panel discussions, facilitating structured and professional dialogue.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <div class="row">
-          <span class="role">HM Pitje Foundation</span>
-          <span class="when">Johannesburg, South Africa</span>
-        </div>
-        <div class="row" style="margin-top: 2px;">
-          <span style="font-style: italic; font-size: 14px;">Project Manager &middot; Advisory Board &middot; Volunteer</span>
-          <span class="when">Jul 2022 — Present</span>
-        </div>
-        <ul>
-          <li>Organised book drives raising $3,000+ and supporting digital skills training for 500+ youth in Soshanguve.</li>
-        </ul>
-      </div>
-
-      <!-- skills -->
-      <h2>Skills</h2>
-      <div class="resume-item">
-        <ul>
-          <li><strong>Programming:</strong> Python, R, C++, C, Java, Swift, Dart</li>
-          <li><strong>ML / NLP:</strong> PyTorch, TensorFlow, Hugging Face, spaCy, NLTK, NumPy, Pandas, Scikit-learn</li>
-          <li><strong>Web / Data:</strong> React, Next.js, SQL, Supabase</li>
-          <li><strong>Tools:</strong> Git, Flutter, Excel</li>
-          <li><strong>Languages:</strong> English (fluent), French (fluent), Sesotho (fluent), Mandarin (intermediate)</li>
-        </ul>
-      </div>
-
-      <p style="margin-top: 32px; font-size: 13px; color: var(--forest); font-style: italic;">
-        Last updated: July 2026.
-      </p>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-links">
-          <a href="mailto:adaorambanefo@gmail.com">Email</a>
-          <a href="https://github.com/adodobird8" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/adaora-mbanefo/" target="_blank" rel="noopener">LinkedIn</a>
+        <div>
+          <div><span class="award">Fiddler Innovation Undergraduate Student Fellowship Award · 2026</span><span class="award">ICIS Founding Generation Fellowship · 2026</span><span class="award">NCSA Letter of Recognition · May 2026</span></div>
+          <p>Relevant coursework: Probability, Mathematical Statistics, Statistical Modelling, Applied Machine Learning, Statistical Learning, Linear Algebra, Data Structures, Computer Systems.</p>
         </div>
       </div>
-      <div class="footer-copy">
-        <span>&copy; 2026 Adaora Mbanefo</span>
-        <span>Built by yours truly &middot; Hosted on GitHub Pages</span>
+      <div class="ritem">
+        <div class="when">Sept 2021 — May 2024<small>Andover, MA</small></div>
+        <div>
+          <div class="org">Phillips Academy Andover</div>
+          <div class="role">Preparatory boarding school</div>
+        </div>
+        <div>
+          <div><span class="award">Winfield M. Sides Prize for Excellence in Computer Science · May 2023</span></div>
+          <p>Blue Key Head · Co-Head of Fusion (African-Caribbean Dance Group) · Co-president of the Black Student Union · Co-founder of the African Student Association · ASL Club Co-Head.</p>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <script src="/script.js" defer></script>
+  <div class="rsec rv">
+    <h2>Experience</h2>
+    <div>
+      <div class="ritem">
+        <div class="when">Fall 2026<small>Champaign, IL</small></div>
+        <div>
+          <div class="org">CS 340: Introduction to Computer Systems, UIUC</div>
+          <div class="role">Course Assistant</div>
+        </div>
+        <div>
+          <ul>
+            <li>Support undergraduates in a systems course covering computer architecture, memory management, concurrency, and networking.</li>
+            <li>Hold office hours, grade coursework, and help students work through systems-level debugging in C.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Aug 2026 — Present<small>Champaign, IL</small></div>
+        <div>
+          <div class="org">New Student and Family Experiences, UIUC</div>
+          <div class="role">Data Analyst</div>
+        </div>
+        <div>
+          <ul>
+            <li>Analyze registration and orientation-week data for 9,000+ incoming students and families in Python and Excel.</li>
+            <li>Build dashboards and reports the NSFE team uses to plan programming and staffing.</li>
+            <li>Track attendance and satisfaction metrics, and audit registration exports for data quality.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Jun 2026 — Present<small>Chicago, IL</small></div>
+        <div>
+          <div class="org">ChatterLab, University of Chicago</div>
+          <div class="role">Junior Researcher</div>
+        </div>
+        <div>
+          <ul>
+            <li>Detect children's entry into multiparty conversation in naturalistic home recordings, using above-baseline semantic alignment to identify multiparty interaction.</li>
+            <li>Build and run semantic alignment pipelines in ALIGN 2.0 on caregiver-child speech in Python, supported by measures such as BERTScore and the Entropy-conVergence Metric.</li>
+            <li>Develop an ELAN-to-ALIGN preprocessing converter that interleaves speaker tiers by time and preserves sung and wordless child vocalisations, moving the analysis from sample data onto real daylong audio.</li>
+            <li>Presented research on identifying multiparty conversation through temporal and alignment-based measures at the ICIS Founding Generation Symposium, September 2026.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Oct 2026 — Present<small>Champaign, IL</small></div>
+        <div>
+          <div class="org">French Beyond Walls, Department of French &amp; Italian, UIUC</div>
+          <div class="role">Research Assistant, Voix Congolaises</div>
+        </div>
+        <div>
+          <ul>
+            <li>Design and conduct French-language interviews on linguistic insecurity among Congolese French speakers in the greater Champaign-Urbana area.</li>
+            <li>Transcribe interviews to build a dataset documenting the community's language history.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Aug 2025 — May 2026<small>Champaign, IL</small></div>
+        <div>
+          <div class="org">Learning and Language Lab, UIUC</div>
+          <div class="role">Research Assistant</div>
+        </div>
+        <div>
+          <ul>
+            <li>Developed a transformer-based model combining visual, linguistic, and BERT-derived features to predict eye-movement patterns.</li>
+            <li>Expanded and curated an eye-tracking corpus from 225k to 800k+ word fixations across skilled readers.</li>
+            <li>Engineered Python pipelines to extract, quantify, and visualise naturalistic caregiver-child interactions for publication.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Jun 2025 — Aug 2025<small>Johannesburg, South Africa</small></div>
+        <div>
+          <div class="org">Inhance Supply Chain Solutions</div>
+          <div class="role">Data Science Intern</div>
+        </div>
+        <div>
+          <ul>
+            <li>Built an automated Python forecasting pipeline using Darts and StatsForecast for time-series preprocessing and modelling.</li>
+            <li>Integrated the forecasting system with AWS Redshift and Lambda for real-time execution, deploying to 400+ warehouses.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Jul 2024 — Oct 2024<small>Nairobi, Kenya</small></div>
+        <div>
+          <div class="org">Adanian Labs, AI Center of Excellence</div>
+          <div class="role">AI Engineering Intern</div>
+        </div>
+        <div>
+          <ul>
+            <li>Co-designed Mwalimu AI, an AI-powered CBC curriculum planner for Kenyan educators, in Python.</li>
+            <li>Fine-tuned the Agricare chatbot backend services, increasing response accuracy by 20%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rsec rv">
+    <h2>Leadership &amp; volunteering</h2>
+    <div>
+      <div class="ritem">
+        <div class="when">May 2026 — Present<small>Remote</small></div>
+        <div>
+          <div class="org">Littafin Fasaha</div>
+          <div class="role">Software Engineer</div>
+        </div>
+        <div>
+          <ul>
+            <li>Fine-tune large language models to deliver interactive computer science instruction in Hausa and other underrepresented African languages.</li>
+            <li>Develop frontend components that integrate model outputs with the user-facing interface, walking students through coding exercises interactively.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">May 2026 — Present<small>Champaign, IL</small></div>
+        <div>
+          <div class="org">University of Illinois Urbana-Champaign</div>
+          <div class="role">Orientation Leader</div>
+        </div>
+        <div>
+          <ul>
+            <li>Welcomed incoming students and their families to campus, leading group sessions on academic planning, university expectations, and student life.</li>
+            <li>Served as a first point of contact for questions about registration, coursework, and adjusting to college.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Oct 2025 — Present<small>Champaign, IL</small></div>
+        <div>
+          <div class="org">NCSA Research Conference Committee</div>
+          <div class="role">Industry Networking Lead</div>
+        </div>
+        <div>
+          <ul>
+            <li>Coordinated with the NCSA Industry Program and university partners to identify and invite industry participants.</li>
+            <li>Developed panel questions to align with the 2026 conference theme.</li>
+            <li>Moderated and led industry panel discussions, facilitating structured and professional dialogue.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ritem">
+        <div class="when">Jul 2022 — Present<small>Johannesburg, South Africa</small></div>
+        <div>
+          <div class="org">HM Pitje Foundation</div>
+          <div class="role">Project Manager · Advisory Board · Volunteer</div>
+        </div>
+        <div>
+          <ul>
+            <li>Organised book drives raising $3,000+ and supporting digital skills training for 500+ youth in Soshanguve.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rsec rv">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><b>Programming</b>Python, R, C++, C, Java, Swift, Dart</div>
+      <div><b>ML / NLP</b>PyTorch, TensorFlow, Hugging Face, spaCy, NLTK, NumPy, Pandas, Scikit-learn</div>
+      <div><b>Web / Data</b>React, Next.js, SQL, Supabase</div>
+      <div><b>Tools</b>Git, Flutter, Excel</div>
+      <div><b>Languages</b>English (fluent), French (fluent), Sesotho (fluent), Mandarin (intermediate)</div>
+    </div>
+  </div>
+
+</div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="mailto:adaorambanefo@gmail.com">Email</a><a href="https://github.com/adodobird8" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/adaora-mbanefo" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="updated">Last updated: November 2026</div>
+    <div class="sig">&copy; adaora</div>
+  </div>
+</footer>
+<script src="/script.js"></script>
 </body>
 </html>

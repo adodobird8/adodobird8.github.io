@@ -4,7 +4,7 @@ My personal site.
 
 ## How it's built
 
-Vanilla HTML, CSS, and a tiny bit of JavaScript. No framework, no build step. Five pages, one shared stylesheet, hosted on GitHub Pages. The domain runs through Cloudflare.
+Vanilla HTML, CSS, and a tiny bit of JavaScript. Two typefaces (Fraunces for display, Space Grotesk for everything else), loaded from Google Fonts. No framework, no build step. Five pages, one shared stylesheet, hosted on GitHub Pages. The domain runs through Cloudflare.
 
 Each page lives in its own folder so the URL stays clean (no `.html` at the end).
 
@@ -27,6 +27,8 @@ Open the file. Find the text. Change it. Save. Refresh the browser.
 When patterns repeat (project cards, research entries), the easiest way to add a new one is to copy an existing block and edit.
 
 Colours and fonts live as CSS variables at the top of `style.css`. One hex value change ripples across the whole site.
+
+Shared styles (nav, footer, type, chips, cards, scroll reveal) are in `style.css`. Styles that only one page needs sit in a small `<style>` block at the top of that page.
 
 ## Publishing a change
 

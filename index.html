@@ -5,198 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaora Mbanefo</title>
   <meta name="description" content="Adaora Mbanefo is an undergraduate at UIUC. NLP, machine learning, AI engineering, and deep love of all things language.">
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Space+Grotesk:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-  <header>
-    <div class="nav-inner">
-      <a href="/" class="brand">adaora.mbanefo</a>
-      <nav>
-        <ul>
-          <li><a href="/" class="active">home</a></li>
-          <li><a href="/research/">research</a></li>
-          <li><a href="/projects/">projects</a></li>
-          <li><a href="/about/">about</a></li>
-          <li><a href="/resume/">resume</a></li>
-        </ul>
-      </nav>
+<nav class="nav">
+  <span class="brand">adaora</span>
+  <a class="on" href="/">home</a><a href="/research/">research</a><a href="/projects/">projects</a><a href="/about/">about</a><a href="/resume/">resume</a>
+</nav>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap split" style="grid-template-columns:1fr 1fr;gap:40px">
+    <div>
+      <p class="meta rv"><span>Researcher</span><span>NLP · ML</span><span>Champaign, IL</span></p>
+      <h1 class="name">
+        <span class="rv"><span class="w">Adaora<span class="say">adore-ah</span></span></span><br>
+        <span class="rv d1"><span class="w last">Mbanefo<span class="say">mm-bah-neh-fo</span></span></span>
+      </h1>
+      <p class="say-line rv d2"><span>adore-ah</span><span class="dot">·</span><span>mm-bah-neh-fo</span></p>
+      <p class="concept rv d2">No language should be left out of the technologies shaping the future.</p>
+      <p class="bio rv d3">Hi, I'm Adaora! I'm an undergraduate studying statistics, linguistics, and computer science. I'm into NLP/NLU, machine learning, and AI engineering. Outside the lab, I read fantasy and keep a running list of words I love in languages I'm still learning.</p>
     </div>
-  </header>
-
-  <main>
-
-    <!-- hero -->
-    <section class="hero reveal">
-      <div class="hero-text">
-        <div class="meta">
-          <span>Researcher</span>
-          <span>NLP &middot; ML &middot; AI engineering</span>
-          <span>Champaign, IL</span>
-        </div>
-
-        <h1 class="hero-name">
-          <span class="nameline"><span class="nword first">Adaora<span class="surface">adore-ah</span></span></span>
-          <span class="nameline"><span class="nword last">Mbanefo<span class="surface">mm-bah-neh-fo</span></span></span>
-        </h1>
-
-        <p class="concept-line">No language should be left out of the technologies shaping the future.</p>
-
-        <p class="hero-bio">
-          Hi, I'm Adaora! I'm an undergraduate studying statistics,
-          linguistics, and computer science. I'm into NLP/NLU, machine learning, and AI engineering.
-          Outside the lab I love to read fantasy, play electric guitar and squash,
-          and keep a running list of words I love in languages I'm still
-          learning.
-        </p>
-      </div>
-
-      <!-- stick figure: working → reading, on hover -->
-      <div class="hero-figure" aria-hidden="true">
-        <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#215f42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <!-- pose a: sitting cross-legged, laptop facing her -->
-          <g class="pose pose-a">
-            <circle cx="140" cy="48" r="9" fill="#215f42"/>
-            <circle cx="180" cy="48" r="9" fill="#215f42"/>
-            <circle cx="160" cy="72" r="22"/>
-            <circle cx="151" cy="74" r="6"/>
-            <circle cx="169" cy="74" r="6"/>
-            <line x1="157" y1="74" x2="163" y2="74"/>
-            <path d="M 154 84 Q 160 88 166 84"/>
-            <line x1="160" y1="94" x2="160" y2="112"/>
-            <path d="M 160 100 L 128 132 L 134 152"/>
-            <path d="M 160 100 L 192 132 L 186 152"/>
-            <rect x="128" y="112" width="64" height="42" rx="3" fill="#215f42"/>
-            <path transform="translate(152 125) scale(0.16)" fill="#c1d5c0" stroke="none"
-              d="M 18 12 L 30 6 L 45 4 L 60 6 L 68 10 L 72 14 L 85 18 L 88 22 L 90 30 L 92 40 L 96 48 L 100 50 L 99 54 L 92 58 L 84 64 L 78 72 L 72 82 L 66 90 L 58 97 L 50 100 L 44 98 L 40 92 L 38 84 L 36 74 L 40 66 L 44 62 L 42 56 L 36 52 L 28 50 L 20 50 L 10 46 L 4 40 L 2 32 L 6 24 L 10 18 L 14 14 Z"/>
-            <rect x="123" y="154" width="74" height="5" rx="2" fill="#215f42"/>
-            <path d="M 148 159 Q 98 170 106 184 Q 138 200 182 196"/>
-            <path d="M 172 159 Q 222 170 214 184 Q 182 200 138 196"/>
-            <path d="M 182 196 L 192 192"/>
-            <path d="M 138 196 L 128 192"/>
-          </g>
-          <!-- pose b: on her stomach, propped on elbows, book on the floor -->
-          <g class="pose pose-b">
-            <path d="M 28 197 L 70 197 L 74 180 L 34 178 Z" fill="#faf5e6"/>
-            <path d="M 28 197 L 70 197 L 74 214 L 34 216 Z" fill="#faf5e6"/>
-            <line x1="28" y1="197" x2="70" y2="197"/>
-            <line x1="40" y1="194" x2="41" y2="184" stroke-width="1.4"/>
-            <line x1="48" y1="194" x2="49" y2="184" stroke-width="1.4"/>
-            <line x1="56" y1="194" x2="57" y2="184" stroke-width="1.4"/>
-            <line x1="64" y1="194" x2="65" y2="184" stroke-width="1.4"/>
-            <line x1="40" y1="200" x2="41" y2="210" stroke-width="1.4"/>
-            <line x1="48" y1="200" x2="49" y2="210" stroke-width="1.4"/>
-            <line x1="56" y1="200" x2="57" y2="210" stroke-width="1.4"/>
-            <line x1="64" y1="200" x2="65" y2="210" stroke-width="1.4"/>
-            <circle cx="96" cy="136" r="9" fill="#215f42"/>
-            <circle cx="114" cy="144" r="9" fill="#215f42"/>
-            <circle cx="100" cy="162" r="20"/>
-            <circle cx="86" cy="168" r="6"/>
-            <line x1="92" y1="167" x2="106" y2="162"/>
-            <line x1="114" y1="174" x2="186" y2="204"/>
-            <path d="M 118 178 L 98 203 L 72 199"/>
-            <path d="M 122 181 L 108 205 L 80 207"/>
-            <path d="M 186 206 L 284 207"/>
-            <path d="M 186 202 L 232 199 L 246 158"/>
-            <path d="M 246 158 L 258 155"/>
-            <rect x="196" y="226" width="56" height="8" rx="2" fill="#215f42"/>
-          </g>
-        </svg>
-      </div>
-    </section>
-
-    <div class="ascii-rule">· · · · · · · · · · · · · · · · · · · · · · · · · · · ·</div>
-
-    <!-- interests -->
-    <section class="reveal-on-scroll section-center">
-      <p class="eyebrow">Interests</p>
-      <h2 class="section-h">What I'm thinking about<svg class="squiggle" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><path d="M 3 5 Q 20 0, 40 5 T 80 5 T 120 5 T 160 5 T 200 5 T 240 5 T 280 5 T 297 5" fill="none" stroke="#c98e1a" stroke-width="2" stroke-linecap="round"/></svg></h2>
-
-      <div class="interests-body">
-        <p>
-          My research lives in NLP/NLU and computational linguistics. Right
-          now I study how children enter multiparty conversation, using
-          transformers to measure linguistic alignment in daylong
-          recordings.
-          <a href="/research/" class="inline-link">go to research &rarr;</a>
-        </p>
-        <p>
-          What has a language model actually learned, and where can you
-          see it? Who do these models harm, and how do you reduce that harm
-          without erasing the people you're trying to protect? And how do
-          you build models that work for the languages they were never
-          built for? Those are the questions I want to answer.
-        </p>
-      </div>
-
-      <div class="topics-row">
-        <p class="eyebrow">topics</p>
-        <div class="chips">
-          <span class="chip chip-mustard">currently obsessed with: mechanistic interpretability</span>
-          <span class="chip">NLP</span>
-          <span class="chip">Machine learning</span>
-          <span class="chip">AI engineering</span>
-          <span class="chip">Human Computer Interaction</span>
-          <span class="chip">Transformers</span>
-          <span class="chip">Natural language understanding</span>
-          <span class="chip">Multiparty dialogue</span>
-          <span class="chip">Low-resource NLP</span>
-          <span class="chip">African languages</span>
-          <span class="chip">Reading &amp; personalisation</span>
-          <span class="chip">Cognitive modelling</span>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- africa -->
-    <section class="reveal-on-scroll section-center">
-      <p class="eyebrow">Motivation</p>
-      <h2 class="section-h">Africa shouldn't be left behind<svg class="squiggle" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><path d="M 3 5 Q 20 0, 40 5 T 80 5 T 120 5 T 160 5 T 200 5 T 240 5 T 280 5 T 297 5" fill="none" stroke="#c98e1a" stroke-width="2" stroke-linecap="round"/></svg></h2>
-
-      <div class="motivation">
-        <p class="lead">Most of the AI deployed today is trained on Western data. It can be used by Africans. It doesn't represent or understand us.</p>
-        <p>
-          The technical divide between the African continent and the
-          rest of the world is widening fast, especially in AI and
-          language technology. But it isn't about talent. Africa has
-          brilliant people, researchers, and builders, and the
-          infrastructure is being built. What's missing is access. So
-          much information isn't available in the languages people
-          speak, and most African languages don't have the data
-          a model would need to fix that.
-        </p>
-        <p>
-          That's the gap I want to help close. I'm African, and I know
-          this continent intimately, but not completely. So I want to
-          work alongside the people who are already doing just that,
-          using tools and research built with African data, languages,
-          contexts, and people in mind.
-          <a href="/projects/" class="inline-link">see the projects &rarr;</a>
-        </p>
-      </div>
-    </section>
-
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-links">
-          <a href="mailto:adaorambanefo@gmail.com">Email</a>
-          <a href="https://github.com/adodobird8" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/adaora-mbanefo/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div class="footer-copy">
-        <span>&copy; 2026 Adaora Mbanefo</span>
-        <span>By yours truly &middot; Hosted on GitHub Pages</span>
-      </div>
+    <div class="fig rv d2">
+      <svg viewBox="10 30 285 215" fill="none" stroke="#215f42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <g class="pose pose-a">
+          <circle cx="140" cy="48" r="9" fill="#215f42"/><circle cx="180" cy="48" r="9" fill="#215f42"/><circle cx="160" cy="72" r="22"/>
+          <circle cx="151" cy="74" r="6"/><circle cx="169" cy="74" r="6"/><line x1="157" y1="74" x2="163" y2="74"/><path d="M 154 84 Q 160 88 166 84"/>
+          <line x1="160" y1="94" x2="160" y2="112"/><path d="M 160 100 L 128 132 L 134 152"/><path d="M 160 100 L 192 132 L 186 152"/>
+          <rect x="128" y="112" width="64" height="42" rx="3" fill="#215f42"/>
+          <path transform="translate(152 125) scale(0.16)" fill="#c1d5c0" stroke="none" d="M 18 12 L 30 6 L 45 4 L 60 6 L 68 10 L 72 14 L 85 18 L 88 22 L 90 30 L 92 40 L 96 48 L 100 50 L 99 54 L 92 58 L 84 64 L 78 72 L 72 82 L 66 90 L 58 97 L 50 100 L 44 98 L 40 92 L 38 84 L 36 74 L 40 66 L 44 62 L 42 56 L 36 52 L 28 50 L 20 50 L 10 46 L 4 40 L 2 32 L 6 24 L 10 18 L 14 14 Z"/>
+          <rect x="123" y="154" width="74" height="5" rx="2" fill="#215f42"/>
+          <path d="M 148 159 Q 98 170 106 184 Q 138 200 182 196"/><path d="M 172 159 Q 222 170 214 184 Q 182 200 138 196"/><path d="M 182 196 L 192 192"/><path d="M 138 196 L 128 192"/>
+        </g>
+        <g class="pose pose-b">
+          <path d="M 28 197 L 70 197 L 74 180 L 34 178 Z" fill="#faf5e6"/><path d="M 28 197 L 70 197 L 74 214 L 34 216 Z" fill="#faf5e6"/><line x1="28" y1="197" x2="70" y2="197"/>
+          <line x1="40" y1="194" x2="41" y2="184" stroke-width="1.4"/><line x1="48" y1="194" x2="49" y2="184" stroke-width="1.4"/><line x1="56" y1="194" x2="57" y2="184" stroke-width="1.4"/><line x1="64" y1="194" x2="65" y2="184" stroke-width="1.4"/>
+          <line x1="40" y1="200" x2="41" y2="210" stroke-width="1.4"/><line x1="48" y1="200" x2="49" y2="210" stroke-width="1.4"/><line x1="56" y1="200" x2="57" y2="210" stroke-width="1.4"/><line x1="64" y1="200" x2="65" y2="210" stroke-width="1.4"/>
+          <circle cx="96" cy="136" r="9" fill="#215f42"/><circle cx="114" cy="144" r="9" fill="#215f42"/><circle cx="100" cy="162" r="20"/>
+          <circle cx="86" cy="168" r="6"/><line x1="92" y1="167" x2="106" y2="162"/>
+          <line x1="114" y1="174" x2="186" y2="204"/><path d="M 118 178 L 98 203 L 72 199"/><path d="M 122 181 L 108 205 L 80 207"/>
+          <path d="M 186 206 L 284 207"/><path d="M 186 202 L 232 199 L 246 158"/><path d="M 246 158 L 258 155"/>
+          <rect x="196" y="226" width="56" height="8" rx="2" fill="#215f42"/>
+        </g>
+      </svg>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="/script.js" defer></script>
+<section id="about" class="band">
+  <div class="wrap split">
+    <div>
+      <p class="label rv">Interests</p>
+      <h2 class="rv d1">What I'm thinking about</h2>
+      <p class="rv d2">My research lives in NLP/NLU and computational linguistics. Right now I study how children enter multiparty conversation, using transformers to measure linguistic alignment in daylong recordings.</p>
+      <p class="rv d2">What has a language model actually learned, and where can you see it? Who do these models harm, and how do you reduce that harm without erasing the people you're trying to protect? And how do you build models that work for the languages they were never built for? Those are the questions I want to answer.</p>
+      <a class="small-link rv d3" href="/research/">Go to research →</a>
+    </div>
+    <div class="chips rv d2">
+      <span class="chip hot">→ currently obsessed with: mechanistic interpretability</span>
+      <span class="chip">NLP</span><span class="chip">Machine learning</span><span class="chip">AI engineering</span><span class="chip">Human Computer Interaction</span><span class="chip">Transformers</span><span class="chip">Natural language understanding</span><span class="chip">Multiparty dialogue</span><span class="chip">Low-resource NLP</span><span class="chip">African languages</span><span class="chip">Reading &amp; personalisation</span><span class="chip">Cognitive modelling</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split motiv" style="grid-template-columns:1fr 1fr;gap:56px;align-items:stretch">
+    <div class="qblock rv">
+      <p class="label">Motivation</p>
+      <p class="quote">Most of the AI deployed today is trained on Western data. It can be used by Africans. <em>It doesn't represent or understand us.</em></p>
+    </div>
+    <div>
+      <h2 class="rv d1" style="font-size:clamp(30px,3vw,40px)">Africa shouldn't be left behind</h2>
+      <p class="rv d2">The technical divide between the African continent and the rest of the world is widening fast, especially in AI and language technology. But it isn't about talent. Africa has brilliant people, researchers, and builders, and the infrastructure is being built. What's missing is access. So much information isn't available in the languages people speak, and most African languages don't have the data a model would need to fix that.</p>
+      <p class="rv d2">That's the gap I want to help close. I'm African, and I know this continent intimately, but not completely. So I want to work alongside the people who are already doing just that, using tools and research built with African data, languages, contexts, and people in mind.</p>
+      <a class="small-link rv d3" href="/projects/">See the projects →</a>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:20px">
+  <div class="wrap">
+    <p class="label rv">Selected work</p>
+    <div class="strip">
+      <a class="card rv" href="/research/"><div><span class="k">Research · UChicago</span><h3>Capturing multiparty interactions</h3><p>Detecting when a child enters a conversation, using semantic alignment in daylong recordings.</p></div><span class="arrow">→</span></a>
+      <a class="card rv d1" href="/projects/"><div><span class="k">Project · most active</span><h3>Plan(t) It</h3><p>A gardening-metaphor task manager for ADHD.</p></div><span class="arrow">→</span></a>
+      <a class="card rv d2" href="/projects/"><div><span class="k">Project · Hausa</span><h3>Littafin Fasaha</h3><p>An interactive CS learning platform for Hausa speakers.</p></div><span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a href="mailto:adaorambanefo@gmail.com">Email</a><a href="https://github.com/adodobird8" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/adaora-mbanefo" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="sig">&copy; adaora</div>
+  </div>
+</footer>
+<script src="/script.js"></script>
 </body>
 </html>
