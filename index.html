@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaora Mbanefo</title>
   <meta name="description" content="Adaora Mbanefo is an undergraduate at UIUC. NLP, machine learning, AI engineering, and deep love of all things language.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Space+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/style.css">
@@ -28,10 +31,16 @@
       </h1>
       <p class="say-line rv d2"><span>adore-ah</span><span class="dot">·</span><span>mm-bah-neh-fo</span></p>
       <p class="concept rv d2">No language should be left out of the technologies shaping the future.</p>
-      <p class="bio rv d3">Hi, I'm Adaora! I'm an undergraduate studying statistics, linguistics, and computer science. I'm into NLP/NLU, machine learning, and AI engineering. Outside the lab, I read fantasy and keep a running list of words I love in languages I'm still learning.</p>
+      <p class="bio rv d3">Hi, I'm Adaora! I'm an undergraduate studying statistics, linguistics, and computer science. I'm into NLP/NLU, machine learning, and AI engineering. Outside the lab, I read fantasy and keep a running list of words I love.</p>
     </div>
-    <div class="fig rv d2">
+    <div class="fig rv d2"> 
       <svg viewBox="10 30 285 215" fill="none" stroke="#215f42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <g class="me-note" font-family="'Fraunces',serif">
+          <text x="34" y="52" font-size="19" font-style="italic" fill="#b8552c" stroke="none">me</text>
+          <text x="62" y="52" font-size="6.5" font-family="'Space Grotesk',sans-serif" font-weight="600" letter-spacing=".6" fill="#b8552c" stroke="none">(HOVER!)</text>
+          <path class="sq" d="M 96 44 C 106 34, 116 36, 125 41" stroke="#b8552c" stroke-width="1.8"/>
+          <path class="sq2" d="M 122.1 36 L 125 41 L 119.2 41.2" stroke="#b8552c" stroke-width="1.8"/>
+        </g>
         <g class="pose pose-a">
           <circle cx="140" cy="48" r="9" fill="#215f42"/><circle cx="180" cy="48" r="9" fill="#215f42"/><circle cx="160" cy="72" r="22"/>
           <circle cx="151" cy="74" r="6"/><circle cx="169" cy="74" r="6"/><line x1="157" y1="74" x2="163" y2="74"/><path d="M 154 84 Q 160 88 166 84"/>
@@ -87,6 +96,17 @@
   </div>
 </section>
 
+<section class="band wordband" style="padding:70px 0">
+  <div class="wrap wordrow rv">
+    <div class="wword"><span id="w-word">…</span><em id="w-pos"></em></div>
+    <div>
+      <p class="label" style="margin-bottom:8px">From my word list</p>
+      <p class="wdef" id="w-def">loading…</p>
+    </div>
+    <div class="wlinks"><a class="small-link" href="/words/">See the whole list →</a><button class="again" id="w-again" type="button">another ↻</button></div>
+  </div>
+</section>
+
 <section id="work" style="padding-top:20px">
   <div class="wrap">
     <p class="label rv">Selected work</p>
@@ -106,6 +126,11 @@
     <div class="sig">&copy; adaora</div>
   </div>
 </footer>
+
+<script src="/words.js"></script>
+<script>
+(function(){const W=window.WORDS||[];let last=-1;function pick(){if(!W.length)return;let i;do{i=Math.floor(Math.random()*W.length)}while(W.length>1&&i===last);last=i;const w=W[i];document.getElementById("w-word").textContent=w[0];document.getElementById("w-pos").textContent=w[1]||"";document.getElementById("w-def").textContent=w[2]}pick();document.getElementById("w-again").addEventListener("click",pick)})();
+</script>
 <script src="/script.js"></script>
 </body>
 </html>

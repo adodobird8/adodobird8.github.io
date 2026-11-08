@@ -111,3 +111,23 @@ section.band .chip{border-color:var(--forest)}
 h2{margin-bottom:22px}
 .split{gap:56px}
 section{padding:96px 0}
+
+/* "me" annotation on the figure */
+.fig{position:relative}
+.me-note{position:absolute;left:6%;top:-13%;display:flex;align-items:flex-start;gap:6px;pointer-events:none;z-index:2}
+.me-note span{font-family:var(--display);font-style:italic;font-size:24px;color:var(--rust);line-height:1;margin-top:12px;white-space:nowrap}
+.me-note span small{font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;opacity:.85;margin-left:4px}
+.me-note .squig{width:90px;height:70px;margin-top:14px}
+.me-note .squig path{stroke-dasharray:160;stroke-dashoffset:160;animation:draw 1.1s .9s ease-out forwards}
+.me-note .squig path+path{stroke-dasharray:40;stroke-dashoffset:40;animation:draw .35s 1.9s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* word strip */
+.wordrow{width:100%;display:grid;grid-template-columns:minmax(260px,auto) 1fr auto;gap:56px;align-items:center}
+.wordrow .wdef{font-size:17px;margin:0;max-width:36ch}
+.wordrow .wword{font-family:var(--display);font-weight:300;font-size:clamp(40px,4.6vw,64px);line-height:1;color:var(--forest);letter-spacing:-.02em;text-align:left}
+.wordrow .wword em{display:block;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);font-weight:600;margin-top:10px}
+.wordrow .wlinks{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.wordrow .again{background:none;border:1.5px solid var(--forest);color:var(--forest);border-radius:999px;padding:7px 13px;font:600 13px var(--sans);cursor:pointer;transition:.2s}
+.wordrow .again:hover{background:var(--forest);color:var(--cream)}
+@media(max-width:900px){.wordrow{grid-template-columns:1fr}.wordrow .wword{text-align:left}.me-note{display:none}}
